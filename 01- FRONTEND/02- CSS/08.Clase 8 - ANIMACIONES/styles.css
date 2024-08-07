@@ -1,0 +1,140 @@
+/* Estilos generales */
+/*configuración de variables*/
+:root{
+    /*colores primarios*/
+    --primary-color:#9f3647;
+    --secondary-color:#fdede3;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    /*colores de fondo*/
+    --bg-color:#181419;
+    --bg-input-color:#2f1b352c;
+    /*fuente primaria*/
+    --primary-font: Arial, sans-serif;
+}
+
+body,html {
+  
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  header {
+    background-color:var(--primary-color); /* Color de fondo bordó */
+    padding: 2vh 0; /* Espaciado interior en la cabecera */    
+    
+    /*SI QUEREMOS DEJAR LA BARRA FIJA AL HACER SCROLL*/
+    position: fixed; /* Hace que la barra de navegación sea fija */
+    top: 0; /* Lo posiciona en la parte superior de la ventana */
+    width: 100%; /* Ajusta su ancho al 100% de la ventana */
+  }
+  
+/*   Crea un contenedor flexible: 
+  Al aplicar display: flex a un elemento padre, se convierte en un contenedor flexible 
+  que organiza a sus elementos hijos de manera flexible 
+  en una sola línea o en varias líneas según sea necesario. */
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    /* Alinea los elementos del nav a los extremos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+  }
+
+  nav ul {
+    list-style-type: none; /* Quita los estilos de la lista */
+    padding: 0;
+    margin: 0;
+    text-align: right; /* Centra los elementos del menú */
+  }
+  
+  nav ul li {
+    display: inline-block; /* Muestra los elementos del menú en línea */
+  }
+  
+  /* Pseudoclases es un selector que marca los elementos que están en un estado 
+  específico first-child: significa primer hijo */
+  nav ul li:first-child { 
+    margin-left: 0;
+    /* Elimina el margen izquierdo del primer elemento */
+  }
+
+  nav ul li:last-child { 
+    margin-right: 1rem;
+    /* Elimina el margen izquierdo del primer elemento */
+  }
+
+  nav ul li a, nav>a { /*utilizamos el selector hijo directo*/
+    display: block; /* Convierte los elementos del menú en bloques */
+    padding: 10px 20px; /* Espaciado interior de los elementos del menú */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color de las letras */
+    transition: background-color 0.3s; /* Transición del color de fondo */
+  }
+  
+  /*Otra pseudoclase en el estado "sobrevolando"*/
+  /* Cambio de color al pasar el mouse sobre los enlaces */
+  /* :hover permite aplicar estilos especiales a un elemento 
+  cuando se encuentra en un estado específico, como cuando el cursor 
+  se coloca sobre él  */  
+
+    nav ul li a:hover {
+    background-color: var(--bg-input-color); /* Color amarillo opaco */
+  }
+
+  /* animaciones del boton */
+  .container {
+    display: flex;
+    justify-content: center; /*alineacion horizontal*/
+    align-items: center; /*alineacion vertical*/
+    height: 200vh;
+  }
+
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    /*las transiciones se establecen con propiedad tiempo y la interpolacion 
+    de entrada y salida*/
+    transition: background-color 0.3s ease; /* Transición de cambio de color */
+
+    /*es lo mismo que escribir
+    transition-property: background-color;  Aplicar la transición a estas propiedades
+    transition-duration: 0.3s;  Duración de la transición: 0.5 segundos 
+    transition-timing-function: ease;  Curva de tiempo */
+  }
+
+  /*Pseudoclase*/
+  /*toda transition esta asociada a un desencadenante en este caso hover*/
+  .btn:hover {
+    background-color: var(--bg-input-color); /* Color de fondo al pasar el mouse */
+  }
+  
+  /* Animación para enfatizar el cambio de color 
+  lo definimos con @keyframe luego le damos un nombre "pulse"*/
+
+  @keyframes pulse {
+    0% { /*keyframes o puntos de animación*/
+      transform: scale(1); /*propiedad a animar*/
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .btn:hover {
+    animation: pulse 0.5s infinite alternate; /* Animación al pasar el mouse */
+
+    /*animation: nombre - duración - repeticion - como reinicia*/
+  }
+  

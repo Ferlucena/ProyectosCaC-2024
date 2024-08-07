@@ -1,0 +1,5 @@
+Hicimos la estructura HTML
+En Css explicamos lo primeros pasos, hablamos del :root y configuramos las generalidades en hmtl, body. 
+avanzamos sobre las propiedades generales del contenedor padre de logo
+hablamos de pixel solamente e introducimos al rem... en lo posible NO EM
+SI O SI explicar padre hijo ancestro... retomar el tema la clase que viene

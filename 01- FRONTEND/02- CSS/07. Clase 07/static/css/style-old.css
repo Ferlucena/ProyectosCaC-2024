@@ -1,0 +1,218 @@
+/* CSS 1: Intro a CSS --------------------------------------------------- */
+
+/* “:root”, es un selector especial
+ que se utiliza principalmente 
+ para definir variables personalizadas de CSS */
+:root{
+    --bg-color:#181419;
+    --primary-color:#9f3647;
+    --secondary-color:#ffc098;
+    --third-color:#db4648;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+
+    --primary-font:'Nunito', sans-serif;
+}
+
+/* selector universal * se aplica a todos los elementos idependiente a su jerarquia */
+*{
+    margin:0;
+    padding:0;
+
+}
+
+/* 1.6	Eliminar la decoración de los 
+hipervínculos, agregar color y tamaño de 
+fuente a la etiqueta <h2></h2> */
+a{
+    text-decoration: none;
+}
+
+h2{
+    color:#FFF;
+    font-size: 2vw;
+}
+
+#logo{
+    font-weight: bold;
+}
+
+.search-title{
+    color: white;
+    font-size: 3vw;
+}
+
+/*imagenes de tendencia hoy*/
+.movie-item-img {
+    width: 200px;
+    height: 300px;
+    -o-object-fit: cover; 
+    object-fit: cover;
+}
+/* 
+Es una forma de asegurarse de que el contenido se ajuste y se muestre
+completamente sin distorsión, recortando partes si excede las dimensiones del contenedor.
+-o-object-fit: Este prefijo era necesario para que Opera pudiera reconocer y aplicar
+la propiedad. 
+object-fit: Esta es la versión sin prefijo y es compatible con la mayoría de los
+navegadores modernos que soportan las especificaciones CSS más actualizadas. */
+
+
+/* CSS 2: Unidades de medida. Colores CSS.
+  Fondos en CSS. Fuentes y tipografías. 
+  Estilos para textos y listas. Íconos ---------------------------------------------------*/
+
+/* Se incorporó en el index.html los links para referenciar fuente externa. */
+/* Se agregó la etiqueta <link> que se utiliza para especificar el ícono
+(favicon) que se muestra en la pestaña del navegador o en la barra de direcciones */
+
+body{
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+
+/* Estilo que se usrá desde js para que al recorrer los enlaces del menú 
+el encabezado cambie de color */
+.scrolled{
+    background-color: var(--third-color);
+}
+
+#banner{
+    background-image: url('../img/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.5); /*para que la imagen quede opaca*/
+}
+
+/* 
+CSS 3 – PLAN DE ESTUDIOS: Modelo de caja y 
+posicionamiento. Modelo de caja y propiedades.
+Posicionamiento y visualización.  */
+
+/* Estilo al encabezado, agregar estilos por el selector de clase:
+color de fondo, color fuente, posición del 
+encabezado, ancho y z-index -------------------------------------------*/
+
+/* elementos del header */
+.header{
+    /* background-color: transparent; */
+    color:#FFF; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* boton registrarse */
+.btn-cac{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color:#FFF;
+}
+
+/*caja del buscador*/
+.input-search {
+    background-color: var(--bg-input-color);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px;
+    width: 70%;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* franja de detalle que se aparecerá sobre la peli */
+.movie-item-detail {
+    bottom: -100%;
+    padding: 30px;
+    max-height: 100%;
+    overflow-y: auto;
+    line-height: 15px;
+    position: absolute;
+    background-color: var(--third-bis-color);
+    box-sizing: border-box;
+    transition: bottom 0.4s ease-in-out;
+    width: 100%;
+}
+
+/* titulo principal del detalle */
+.movie-item-detail-title {
+    color: white;
+    margin: 5px 0px 0px 0px;
+}
+
+/* subtitulo del detalle */
+.movie-item-detail-subtitle {
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}
+
+/* contenedor de las mas aclamadas */
+#top-rated{
+    margin: 50px 0px;
+}
+
+/*  *** CINTA DE PELICULAS MAS ACLAMADAS ***
+<!-- Info de las películas mismo formato para todas --> */
+.movie-item-v2{
+    border-radius: 20px;
+    width: 170px;    
+    min-width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    
+}
+
+/*contendor de la imagen*/
+.wrapper {
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 10px;
+    width: 100%;
+    min-height: calc(150px*1.5);
+    height: calc(150px*1.5);
+    overflow: hidden;
+}
+
+/* etiquetas img con la class... */
+.movie-item-img-v2 {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* contenedor de detalles */
+.movie-item-detail-v2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* contenedor del titulo del detalle */
+.movie-item-detail-title-v2 {
+    color: white;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+/* contenedor del titulo del detalle */
+.movie-item-detail-subtitle-v2 {
+    color: white;
+    font-size: 12px;
+    margin: 3px 0px;
+}

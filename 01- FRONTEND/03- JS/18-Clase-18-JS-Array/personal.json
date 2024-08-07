@@ -1,0 +1,49 @@
+// esto es un JSON con una estructura de un arreglo de objetos
+
+[
+    {
+        "id": "001a",
+        "nombre": "Luis",
+        "apellido": "Fernández",
+        "segundoNombre": null,
+        "edad": 30,
+        "hijos": [
+            "Ana",
+            "Luisa",
+            "Marcelo"
+        ]
+    },
+    {
+        "id": "002a",
+        "nombre": "Luisa",
+        "apellido": "Rodiriguez",
+        "segundoNombre": null,
+        "edad": 25,
+        "hijos": []
+    }
+]
+
+// O bien puede estar escrito asi para una mejor referenciacion de las propiedades
+// esto es un JSON con una estructura de un objeto de objetos
+{
+    "personal1": {
+        "id": "001a",
+        "nombre": "Luis",
+        "apellido": "Fernández",
+        "segundoNombre": null,
+        "edad": 30,
+        "hijos": [
+            "Ana",
+            "Luisa",
+            "Marcelo"
+        ]
+    },
+    "personal2": {
+        "id": "002a",
+        "nombre": "Luisa",
+        "apellido": "Rodiriguez",
+        "segundoNombre": null,
+        "edad": 25,
+        "hijos": []
+    }
+}

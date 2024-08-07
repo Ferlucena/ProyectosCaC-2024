@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de CSS</title>
+    
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    
+    <!-- CSS interno -->
+    <style>
+        /* CSS interno */
+        h1 {
+            color: purple;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- CSS en línea -->
+    <h1 style="font-size: 48px;">Bases de CSS</h1>
+    
+    <!-- notacion bem (block element modifier) bock_element-modifier -->
+    <!-- Selectores básicos -->
+    <div class="contenedor contenedor-small">
+        
+        <section>
+            <p class="texto">Este es un párrafo dentro de un contenedor.</p>
+        </section>
+        
+    </div>
+    <br>
+
+    <!-- Selector de etiqueta -->
+    <article><p>Este es un párrafo de texto sin contenedor.</p></article>
+    
+
+    <br>
+    <br>
+
+    <!-- Selector universal -->
+    <div class="contenedor">       
+        
+        <p>Este es otro párrafo de texto.</p>
+        
+        <div class="contenedor_texto ">
+
+            <div class="contenedor-azul">
+                <p>Este es un <span>span</span> dentro del div.</p>
+            </div>
+            
+        </div>
+   
+    </div>
+
+</body>
+
+</html>

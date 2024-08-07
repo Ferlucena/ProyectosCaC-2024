@@ -1,0 +1,162 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  /*dimensiones*/
+  max-width: 980px;
+  margin: 0 auto;
+  /*predisponemos al padre en grillas*/
+  display: grid;
+  /*cantidad de columnas, dimensiones*/
+  grid-template-columns: repeat(6, 1fr);
+  /*cantidad de filas 80-20*/
+  grid-template-rows: 10vh 77.5vh 10vh;
+  /*dimensiones de las calles*/
+  gap: 10px; /*valor_x valor_y*/
+}
+
+.main {
+  /*Predisponemos al comportamiento de las hijas*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /*cuantas columnas del padre ocuparemos?*/
+  grid-column-start: 1;
+  grid-column-end: 7;
+  /*valor de los caminos verticales*/
+  grid-gap: 10px;
+  /*cantidad de filas*/
+  grid-template-rows: auto;
+}
+
+.aside {
+  /*¿cuántas columnas ocupa el aside?*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #6495ed;
+  padding: 10px;
+}
+
+/* Estilos para los encabezados dentro del aside */
+.aside h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los enlaces dentro del aside */
+.aside ul li a {
+  color: #0055aa;
+  text-decoration: none;
+}
+
+/*Efectos*/
+.aside ul li a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  background-color: #87ceeb;
+  padding: 10px;
+}
+
+/* Pie de página*/
+.nav ,
+.nav ul {
+  /*Predisponemos al comportamiento de las hijas*/
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  /*cuantas columnas del padre ocuparemos?*/
+  grid-column-start: 1;
+  grid-column-end: 7;
+  /*valor de los caminos verticales (gap=)*/
+  grid-gap: 10px;
+  /*geometría del contenedor*/
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+}
+
+.nav > ul > li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav > ul li {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Trabajamos con pseudoselectores */
+footer ul li:nth-child(1) {
+  /* Posicion de la primer hija desde la celda 2 el resto sigue la secuencia */
+  grid-column: 2;
+}
+
+.header ul li:nth-child(1) {
+  /* Posicion de la primer hija desde la celda 4 del header  */
+  /* padding-left: 1vw;
+  justify-content: start !important; */
+  grid-column: 4;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
+}
+
+/* Estilos para los enlaces dentro del footer */
+
+/* pseudoclases */
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/*MENU DESPLEGABLE*/
+/* Agregar estilos y animación para el menú desplegable */
+
+.header ul li .dropdown-content {  
+  position: absolute; /* Posicionar absolutamente con respecto al enlace padre */
+  background-color: #333;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+  z-index: 1; /* Asegurar que esté por encima de otros elementos */
+  
+  top: 10vh; /* Desplazar el menú hacia abajo */
+  right: 0; 
+  transition: all 0.5s ease;
+  
+  display: flex; /* Ocultar el contenido por defecto */
+  flex-direction: column;
+  
+  opacity: 0;
+}
+
+/*Recordemos el concepto por cada absolute debe haber un padre relative a quien seguir*/
+/*En este caso damos relative al padre ul dentro de header*/
+
+.header ul {
+  position: relative;
+} 
+
+/* Mostrar el menú desplegable al hacer hover sobre el enlace */
+.header ul li:hover .dropdown-content {
+  opacity: 1;    
+}
+
+/* Estilos para los elementos del menú desplegable */
+.header ul li .dropdown-content li {
+  padding: 20px 40px; /* Espaciado interno */
+  /*damos transicion a la selección*/
+  transition: all 0.3s ease; 
+}
+
+/* Cambiar color de fondo al pasar el mouse sobre elementos del menú desplegable */
+.header ul li .dropdown-content li:hover {
+  background-color: #575757;
+}

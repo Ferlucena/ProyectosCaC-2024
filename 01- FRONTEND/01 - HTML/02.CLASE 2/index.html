@@ -1,0 +1,88 @@
+<!-- 
+En este práctico vamos a comenzar a desarrollar un sitio web
+En esta clase vamos a estructurar un menú valiendonos de listas y etiquetas
+semánticas correspondientes
+Vamos a establecer rutas para conectar distintas páginas 
+1- Diseñamos la barra de navegación
+2- vinculamos la seccion API Movie con la página con referencias absolutas
+3- Creamos la página register.html 
+4- Vinculamos el menú con la pagina register.html con referencias relativas
+5- Generamos un enlace interno
+6- Generamos una descarga de archivo
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaC-Movies, peliculas y series online</title>
+</head>
+
+<body>
+
+    <!-- diseño de la cabecera de la página -->
+    <!-- <header> es una sección que generalmente se encuentra en la parte superior
+    de una página web y proporciona información importante 
+    sobre el contenido o la navegación de esa página. 
+    Es importante tener en cuenta que el <header> 
+    no debe confundirse con el elemento <head>, 
+    que se utiliza para contener metadatos y enlaces a recursos externos 
+    en el documento HTML.
+-->
+
+    <header>
+        <!-- diseño de la barra de navegación -->
+        <nav>
+            <!-- espacio del logo -->
+            <h1>CaC-Movies</h1>
+            <!-- diseño del menú con etiqueta de listas desordenadas -->
+            <ul type="square">
+                <!-- cada item li es un elemento del menú -->
+                <li>Tendencias</li>
+                <!-- trabajamos con referencias relativas -->
+                <!-- ./ hace referencia al directoria actual -->
+                <li><a href="./register.html" title="Haz click para registrarte">Registrarse</a></li>
+                <!-- trabajamos con enlaces absolutos-->
+                <li>
+                    <!--
+                    introducimos la etiqueta a con su atributo href
+                    hfer indica donde debe dirigiste el vinculo al hacer click 
+                    Para abrir un enlace en una nueva ventana o pestaña, 
+                    puedes utilizar el valor _blank
+                -->
+                    <a href="https://developer.themoviedb.org/docs" target="_blank"
+                        title="Haz click para ir a la API">API Movie</a>
+                </li>
+                <li>Iniciar sesion</li>
+            </ul>
+            <!-- diseño del menú con etiqueta de listas ordenadas -->
+            <ol type="I">
+                <!-- cada item li es un elemento del menú -->
+                <li>Tendencias</li>
+                <li>Registrarse</li>
+                <li>API Movie</li>
+                <li>Iniciar sesion</li>
+            </ol>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            
+            <!-- estos elementos en linea se ubican unos al lado del otro
+            ya que ocupan solo su espacio y no todo el ancho del espacio de trabajo -->
+
+        </section>
+
+    </main>
+    
+            <br>
+            <a href="./documento.txt" download="nombre_personalizado.txt">Desgargá el documento</a>
+            <br>
+            <a href="#inicio">Ir al inicio</a>
+
+</body>
+
+</html>

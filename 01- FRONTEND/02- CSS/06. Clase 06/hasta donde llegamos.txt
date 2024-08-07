@@ -1,0 +1,5 @@
+- Introduccion a cajas, herencias, propiedades heredables y no heredables
+- dimensiones geometricas margin padding
+- posicionamiento absolute relative coordenadas de posicionamiento left top right button
+- todo el código que falta
+

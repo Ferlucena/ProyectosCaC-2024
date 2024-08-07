@@ -1,0 +1,39 @@
+{
+    "homero": {
+      "nombre": "Homero",
+      "edad": 39,
+      "peso": 108,
+      "esCalvo": true,
+      "fraseFavorita": "¡Ouch!"
+      
+    },
+    "marge": {
+      "nombre": "Marge",
+      "edad": 36,
+      "peso": 65,
+      "esCalvo": false,
+      "fraseFavorita": "Mmmm..."
+    },
+    "bart": {
+      "nombre": "Bart",
+      "edad": 10,
+      "peso": 40,
+      "esCalvo": true,
+      "fraseFavorita": "¡Ay, caramba!"
+    },
+    "lisa": {
+      "nombre": "Lisa",
+      "edad": 8,
+      "peso": 35,
+      "esCalvo": false,
+      "fraseFavorita": "Bart!!!"
+    },
+    "maggie": {
+      "nombre": "Maggie",
+      "edad": 1,
+      "peso": 12,
+      "esCalvo": true,
+      "fraseFavorita": "chucu, chucu"
+    }
+  }
+  

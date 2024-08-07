@@ -1,0 +1,16 @@
+{
+  "name": "28.clase28",
+  "version": "1.0.0",
+  "main": "server.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "Codo a Codo",
+  "license": "ISC",
+  "description": "Servidor atendiendo la página de películas",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

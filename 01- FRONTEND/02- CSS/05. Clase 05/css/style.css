@@ -1,0 +1,58 @@
+/*Esto es un comentario de línea*/
+
+/*
+Autor: Nombre del Autor
+Fecha: Fecha de Creación
+Descripción: Este archivo CSS contiene los estilos para el sitio web X.
+*/
+
+/* Secciones de un código en css 
+1- Comentarios de cabecera
+
+2- Reglas de estilo, ordenados por especificidad :
+    a- Reglas universales.
+    b- Reglas generales root o <html>, <body>, header, footer, main 
+    c- Otros selectores de tipo o etiquetas: hi, p, span, a
+    d- selectores de id 
+    e- selectores de clase
+    f- selectores especificos o pseudo-clases
+
+3- Media Queries 
+*/
+
+:root{
+    background-color: blueviolet;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: aqua;
+}
+
+html, body{
+    margin:0;    
+}
+
+.header_logo{
+   margin-top: 3rem; 
+   margin-left: r3em;
+   text-decoration: none;
+   font-size: 2rem;
+}
+
+.logo-color i{
+    color: #f2f2f2 
+}
+
+/* cuerpo */
+.banner{
+ width: 100vw;
+}
+
+.banner_content{
+    font-size: 16px;
+    text-align: center;
+    color: #f2f2f2;
+}
+

@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+  }
+  
+  .contenedor-padre {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente dentro del contenedor padre */
+    align-items: center; /* Alinea verticalmente dentro del contenedor padre */
+  }
+  
+  .caja {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+  }
+  
